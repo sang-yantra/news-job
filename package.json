@@ -1,0 +1,39 @@
+{
+  "name": "news-job",
+  "version": "1.0.0",
+  "description": "job to fetch news data",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node ./dist/index.js",
+    "start": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+    "build": "tsc --watch",
+    "db-build": "prisma generate",
+    "db-pull": "prisma db pull && prisma generate",
+    "db-push": "prisma db push"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@types/uuid": "^9.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.47.0",
+    "@typescript-eslint/parser": "^5.47.0",
+    "eslint": "^8.30.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prisma": "^4.8.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.8.0",
+    "axios": "^1.2.1",
+    "dotenv": "^16.0.3",
+    "node-fetch": "^3.3.0",
+    "nodemon": "^2.0.20",
+    "uuid": "^9.0.0",
+    "winston": "^3.8.2"
+  }
+}
