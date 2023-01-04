@@ -11,6 +11,8 @@ async function main() {
     console.log(error);
   }
 }
-cron.schedule("*/5 * * * *", function () {
+
+// cron job running every 2 hour
+cron.schedule("0 */2 * * *", function () {
   main();
 });
