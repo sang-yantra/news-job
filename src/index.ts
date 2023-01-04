@@ -1,6 +1,6 @@
 import NewsImport from "./infrastructure/news-import.js";
 import logger from "./logging/index.js";
-
+import cron from "node-cron";
 async function main() {
   try {
     logger.info("app started...");
@@ -11,5 +11,6 @@ async function main() {
     console.log(error);
   }
 }
-
-main();
+cron.schedule("*/5 * * * *", function () {
+  main();
+});
